@@ -1,0 +1,8 @@
+T__0=1
+T__1=2
+WHITESPACE=3
+STRING_LITERAL=4
+IDENTIFIER=5
+'('=1
+')'=2
+' '=3
