@@ -1,7 +1,7 @@
 grammar lang;
 
 parse
-: expr+
+: expr+ EOF
 ;
 
 expr
