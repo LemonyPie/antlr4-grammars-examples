@@ -5,7 +5,7 @@ parse
 ;
 
 expr
-: '(' literal_value+ ')'
+: OPEN_PARENTHESIS literal_value+ CLOSE_PARENTHESIS
 ;
 
 literal_value
@@ -16,8 +16,24 @@ WHITESPACE : ' ' -> skip ;
 
 STRING_LITERAL
 : IDENTIFIER
-| '\'' IDENTIFIER '\''
-| '"' IDENTIFIER '"'
+| SINGLE_QUOTE IDENTIFIER SINGLE_QUOTE
+| DOUBLE_QUOTE IDENTIFIER DOUBLE_QUOTE
+;
+
+OPEN_PARENTHESIS
+: '(' //-> channel(HIDDEN)
+;
+
+CLOSE_PARENTHESIS
+: ')' //-> channel(HIDDEN)
+;
+
+SINGLE_QUOTE
+: '\''
+;
+
+DOUBLE_QUOTE
+: '"'
 ;
 
 IDENTIFIER
