@@ -6,6 +6,7 @@ parse
 
 expr
 : OPEN_PARENTHESIS literal_value+ CLOSE_PARENTHESIS
+| OPEN_PARENTHESIS literal_value+ {this.logError("Missing closing ')'");}
 ;
 
 literal_value
@@ -17,7 +18,9 @@ WHITESPACE : ' ' -> skip ;
 STRING_LITERAL
 : IDENTIFIER
 | SINGLE_QUOTE IDENTIFIER SINGLE_QUOTE
+| SINGLE_QUOTE IDENTIFIER {this.logError("Missing closing '\''")}
 | DOUBLE_QUOTE IDENTIFIER DOUBLE_QUOTE
+| DOUBLE_QUOTE IDENTIFIER {this.logError("Missing closing '\"'")}
 ;
 
 OPEN_PARENTHESIS

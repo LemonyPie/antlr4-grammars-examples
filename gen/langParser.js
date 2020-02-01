@@ -8,22 +8,30 @@ var grammarFileName = "lang.g4";
 
 
 var serializedATN = ["\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964",
-    "\u0003\t\u001a\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t",
-    "\u0004\u0003\u0002\u0006\u0002\n\n\u0002\r\u0002\u000e\u0002\u000b\u0003",
-    "\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0006\u0003\u0012\n\u0003",
-    "\r\u0003\u000e\u0003\u0013\u0003\u0003\u0003\u0003\u0003\u0004\u0003",
-    "\u0004\u0003\u0004\u0002\u0002\u0005\u0002\u0004\u0006\u0002\u0002\u0002",
-    "\u0018\u0002\t\u0003\u0002\u0002\u0002\u0004\u000f\u0003\u0002\u0002",
-    "\u0002\u0006\u0017\u0003\u0002\u0002\u0002\b\n\u0005\u0004\u0003\u0002",
-    "\t\b\u0003\u0002\u0002\u0002\n\u000b\u0003\u0002\u0002\u0002\u000b\t",
-    "\u0003\u0002\u0002\u0002\u000b\f\u0003\u0002\u0002\u0002\f\r\u0003\u0002",
-    "\u0002\u0002\r\u000e\u0007\u0002\u0002\u0003\u000e\u0003\u0003\u0002",
-    "\u0002\u0002\u000f\u0011\u0007\u0005\u0002\u0002\u0010\u0012\u0005\u0006",
-    "\u0004\u0002\u0011\u0010\u0003\u0002\u0002\u0002\u0012\u0013\u0003\u0002",
-    "\u0002\u0002\u0013\u0011\u0003\u0002\u0002\u0002\u0013\u0014\u0003\u0002",
-    "\u0002\u0002\u0014\u0015\u0003\u0002\u0002\u0002\u0015\u0016\u0007\u0006",
-    "\u0002\u0002\u0016\u0005\u0003\u0002\u0002\u0002\u0017\u0018\u0007\u0004",
-    "\u0002\u0002\u0018\u0007\u0003\u0002\u0002\u0002\u0004\u000b\u0013"].join("");
+    "\u0003\t$\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t\u0004",
+    "\u0003\u0002\u0006\u0002\n\n\u0002\r\u0002\u000e\u0002\u000b\u0003\u0002",
+    "\u0003\u0002\u0003\u0003\u0003\u0003\u0006\u0003\u0012\n\u0003\r\u0003",
+    "\u000e\u0003\u0013\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0006",
+    "\u0003\u001a\n\u0003\r\u0003\u000e\u0003\u001b\u0003\u0003\u0003\u0003",
+    "\u0005\u0003 \n\u0003\u0003\u0004\u0003\u0004\u0003\u0004\u0002\u0002",
+    "\u0005\u0002\u0004\u0006\u0002\u0002\u0002$\u0002\t\u0003\u0002\u0002",
+    "\u0002\u0004\u001f\u0003\u0002\u0002\u0002\u0006!\u0003\u0002\u0002",
+    "\u0002\b\n\u0005\u0004\u0003\u0002\t\b\u0003\u0002\u0002\u0002\n\u000b",
+    "\u0003\u0002\u0002\u0002\u000b\t\u0003\u0002\u0002\u0002\u000b\f\u0003",
+    "\u0002\u0002\u0002\f\r\u0003\u0002\u0002\u0002\r\u000e\u0007\u0002\u0002",
+    "\u0003\u000e\u0003\u0003\u0002\u0002\u0002\u000f\u0011\u0007\u0005\u0002",
+    "\u0002\u0010\u0012\u0005\u0006\u0004\u0002\u0011\u0010\u0003\u0002\u0002",
+    "\u0002\u0012\u0013\u0003\u0002\u0002\u0002\u0013\u0011\u0003\u0002\u0002",
+    "\u0002\u0013\u0014\u0003\u0002\u0002\u0002\u0014\u0015\u0003\u0002\u0002",
+    "\u0002\u0015\u0016\u0007\u0006\u0002\u0002\u0016 \u0003\u0002\u0002",
+    "\u0002\u0017\u0019\u0007\u0005\u0002\u0002\u0018\u001a\u0005\u0006\u0004",
+    "\u0002\u0019\u0018\u0003\u0002\u0002\u0002\u001a\u001b\u0003\u0002\u0002",
+    "\u0002\u001b\u0019\u0003\u0002\u0002\u0002\u001b\u001c\u0003\u0002\u0002",
+    "\u0002\u001c\u001d\u0003\u0002\u0002\u0002\u001d\u001e\b\u0003\u0001",
+    "\u0002\u001e \u0003\u0002\u0002\u0002\u001f\u000f\u0003\u0002\u0002",
+    "\u0002\u001f\u0017\u0003\u0002\u0002\u0002 \u0005\u0003\u0002\u0002",
+    "\u0002!\"\u0007\u0004\u0002\u0002\"\u0007\u0003\u0002\u0002\u0002\u0006",
+    "\u000b\u0013\u001b\u001f"].join("");
 
 
 var atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -228,21 +236,46 @@ langParser.prototype.expr = function() {
     this.enterRule(localctx, 2, langParser.RULE_expr);
     var _la = 0; // Token type
     try {
-        this.enterOuterAlt(localctx, 1);
-        this.state = 13;
-        this.match(langParser.OPEN_PARENTHESIS);
-        this.state = 15; 
+        this.state = 29;
         this._errHandler.sync(this);
-        _la = this._input.LA(1);
-        do {
-            this.state = 14;
-            this.literal_value();
-            this.state = 17; 
+        var la_ = this._interp.adaptivePredict(this._input,3,this._ctx);
+        switch(la_) {
+        case 1:
+            this.enterOuterAlt(localctx, 1);
+            this.state = 13;
+            this.match(langParser.OPEN_PARENTHESIS);
+            this.state = 15; 
             this._errHandler.sync(this);
             _la = this._input.LA(1);
-        } while(_la===langParser.STRING_LITERAL);
-        this.state = 19;
-        this.match(langParser.CLOSE_PARENTHESIS);
+            do {
+                this.state = 14;
+                this.literal_value();
+                this.state = 17; 
+                this._errHandler.sync(this);
+                _la = this._input.LA(1);
+            } while(_la===langParser.STRING_LITERAL);
+            this.state = 19;
+            this.match(langParser.CLOSE_PARENTHESIS);
+            break;
+
+        case 2:
+            this.enterOuterAlt(localctx, 2);
+            this.state = 21;
+            this.match(langParser.OPEN_PARENTHESIS);
+            this.state = 23; 
+            this._errHandler.sync(this);
+            _la = this._input.LA(1);
+            do {
+                this.state = 22;
+                this.literal_value();
+                this.state = 25; 
+                this._errHandler.sync(this);
+                _la = this._input.LA(1);
+            } while(_la===langParser.STRING_LITERAL);
+            this.logError("Missing closing ')'");
+            break;
+
+        }
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -309,7 +342,7 @@ langParser.prototype.literal_value = function() {
     this.enterRule(localctx, 4, langParser.RULE_literal_value);
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 21;
+        this.state = 31;
         this.match(langParser.STRING_LITERAL);
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
