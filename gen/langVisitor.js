@@ -30,5 +30,11 @@ langVisitor.prototype.visitLiteral_value = function(ctx) {
 };
 
 
+// Visit a parse tree produced by langParser#operation_type.
+langVisitor.prototype.visitOperation_type = function(ctx) {
+  return this.visitChildren(ctx);
+};
+
+
 
 exports.langVisitor = langVisitor;

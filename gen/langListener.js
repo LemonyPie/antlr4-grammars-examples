@@ -38,5 +38,14 @@ langListener.prototype.exitLiteral_value = function(ctx) {
 };
 
 
+// Enter a parse tree produced by langParser#operation_type.
+langListener.prototype.enterOperation_type = function(ctx) {
+};
+
+// Exit a parse tree produced by langParser#operation_type.
+langListener.prototype.exitOperation_type = function(ctx) {
+};
+
+
 
 exports.langListener = langListener;

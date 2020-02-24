@@ -5,13 +5,27 @@ parse
 ;
 
 expr
-: OPEN_PARENTHESIS literal_value+ CLOSE_PARENTHESIS
+: expr (OR expr)+
+| expr (AND expr)+
+| expr_value
+;
+
+expr_value
+: literal_value+
+| OPEN_PARENTHESIS literal_value+ CLOSE_PARENTHESIS
 | OPEN_PARENTHESIS literal_value+ {this.logError("Missing closing ')'");}
 ;
 
 literal_value
-: STRING_LITERAL
+: {_input.LT(1).GetText() === 'async' }? operation_type
+| STRING_LITERAL
 ;
+
+operation_type
+: ASYNC
+;
+
+ASYNC: 'async';
 
 WHITESPACE : ' ' -> skip ;
 
@@ -42,3 +56,19 @@ DOUBLE_QUOTE
 IDENTIFIER
 : [a-zA-Z] [a-zA-Z0-9]*
 ;
+
+AND
+: A N D
+;
+
+OR
+: O R
+;
+
+fragment A: [aA];
+fragment N: [aN];
+fragment D: [dD];
+fragment O: [oO];
+fragment R: [rR];
+
+
