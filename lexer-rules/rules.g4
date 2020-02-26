@@ -1,12 +1,12 @@
 grammar rules;
 
 parse
-: NUMBER ((OPERATION | POWER) NUMBER)+
+: NUMBER ((OPERATION | POWER) NUMBER)+ EOF
 ;
 
 WHITESPACE: ' ' -> skip;
 
-COMMENT: '//' [a-zA-Z]+ -> channel(HIDDEN);
+COMMENT: '//' [a-zA-Z\n ]+ -> channel(HIDDEN);
 
 NUMBER: [0-9]+;
 
