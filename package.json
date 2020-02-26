@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "lang.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "antlr4": "^4.8.0"
+  "scripts": {
+    "parcel": "parcel",
+    "build": "parcel build",
+    "lexer": "parcel lexer-rules/index.html",
+    "parser": "parcel parser-rules/index.html"
   },
   "devDependencies": {
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "antlr4": "^4.8.0"
   }
 }
