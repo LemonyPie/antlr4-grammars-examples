@@ -9,8 +9,8 @@
   "scripts": {
     "parcel": "parcel",
     "build": "parcel build",
-    "lexer": "parcel lexer-rules/index.html",
-    "parser": "parcel parser-rules/index.html"
+    "lexer": "parcel ./lexer-rules/index.html",
+    "parser": "parcel ./parser-rules/index.html"
   },
   "devDependencies": {
     "parcel": "^1.12.4"
