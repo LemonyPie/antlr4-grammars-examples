@@ -13,7 +13,7 @@
     "parser": "parcel ./parser-rules/index.html"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^2.8.2"
   },
   "dependencies": {
     "antlr4": "^4.8.0"
